@@ -1,7 +1,5 @@
 # Automated Exploratory Data Analysis Agent with Retrieval-Augmented Generation
 
-Niraj Palve
-
 ## Overview
 
 Exploratory data analysis (EDA) is the first step of almost every data
@@ -190,47 +188,7 @@ as a single self-contained HTML file with every plot embedded
 (`src/report.py`). Results are held in Streamlit's session state so that
 they persist across the reruns Streamlit triggers on every interaction.
 
-### Verifying a report
-
-Every number stated in `outputs/report.md` should appear in
-`outputs/run_log.json`; a number that does not was introduced by the LLM
-rather than computed by a tool. On the synthetic dataset, the report
-should identify all seven planted problems. Recommended real-world test
-datasets are Titanic (missing values, categorical and ID columns), House
-Prices (wide, skewed, strongly correlated), Wine Quality
-(semicolon-separated, all numeric, outliers), Telco Customer Churn
-(numbers stored as text), and Iris, a small clean dataset on which a good
-agent should *not* report problems that are not there.
-
-## Known limitations
-
-Dates and formatted numbers (for example `2024-03-15` or `"€1,200"`) are
-read as text and therefore analysed as categorical columns. Datasets wider
-than roughly 40 columns can exceed the Groq free tier's token-per-minute
-limit, and the correlation heatmap becomes hard to read; distribution
-plots are capped at 20 columns. There is not yet an option to designate a
-target column, so the knowledge base's target-variable and target-leakage
-guidance is never triggered. Very large files run slowly, mostly because
-of plotting, and sampling is recommended for EDA purposes.
-
-## References
-
-- Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N.,
-  Küttler, H., Lewis, M., Yih, W., Rocktäschel, T., Riedel, S., & Kiela, D.
-  (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks.
-  *Advances in Neural Information Processing Systems (NeurIPS)*, 33,
-  9459–9474.
-- Reimers, N., & Gurevych, I. (2019). Sentence-BERT: Sentence embeddings
-  using Siamese BERT-networks. *Proceedings of EMNLP-IJCNLP*, 3982–3992.
-- Tukey, J. W. (1977). *Exploratory Data Analysis*. Addison-Wesley.
-- Wang, L., Xu, W., Lan, Y., Hu, Z., Lan, Y., Lee, R. K.-W., & Lim, E.-P.
-  (2023). Plan-and-Solve prompting: Improving zero-shot chain-of-thought
-  reasoning by large language models. *Proceedings of ACL*, 2609–2634.
-- Wang, W., Wei, F., Dong, L., Bao, H., Yang, N., & Zhou, M. (2020).
-  MiniLM: Deep self-attention distillation for task-agnostic compression
-  of pre-trained transformers. *Advances in Neural Information Processing
-  Systems (NeurIPS)*, 33, 5776–5788.
 
 ## Contributors
 
-- Niraj Palve (25200843)
+- Niraj Palve 
