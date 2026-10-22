@@ -49,7 +49,6 @@ eda-agent/
 ├── chroma_db/                  # vector index (gitignored, rebuilt locally)
 ├── outputs/                    # reports, run logs, plots (gitignored)
 ├── app.py                      # Streamlit web application
-├── requirements.txt
 └── .env                        # API key (gitignored, never committed)
 ```
 
