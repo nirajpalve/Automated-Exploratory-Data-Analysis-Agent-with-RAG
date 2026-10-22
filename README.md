@@ -18,13 +18,11 @@ addresses all three issues by:
    LLM. The LLM only ever sees compact JSON summaries of tool outputs, not
    the raw data, and is instructed to use only those values.
 2. **LLM-driven planning and interpretation.** Following a plan-then-execute
-   design (in the spirit of Plan-and-Solve prompting, Wang et al., 2023), an
-   LLM inspects a profile of the dataset, decides which analyses to run, with
+   design, an LLM inspects a profile of the dataset, decides which analyses to run, with
    which settings and why, and afterwards interprets the results in a
    structured written report with prioritised recommendations.
-3. **Retrieval-augmented generation (RAG).** A curated knowledge base of EDA
-   best practices (drawing on the exploratory tradition of Tukey, 1977) is
-   embedded and indexed (Lewis et al., 2020). Relevant guidelines are
+3. **Retrieval-augmented generation (RAG).** Acurated knowledge base of EDA
+   best practices is embedded and indexed. Relevant guidelines are
    retrieved **twice** per run: once to shape *what to analyse* during
    planning, and again, based on what was actually found, to shape *how to
    interpret* the findings. The report names the guideline behind each
