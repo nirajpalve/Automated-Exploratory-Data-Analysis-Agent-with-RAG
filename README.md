@@ -5,9 +5,8 @@
 Exploratory data analysis (EDA) is the first step of almost every data
 science project, yet it is largely manual and repetitive, and its quality
 depends heavily on the analyst's experience. The same checks are rewritten
-for every new dataset, and whether the right method is chosen (for example,
-IQR versus z-score for outliers, or Spearman versus Pearson for correlation)
-is left to individual judgement. Large language models (LLMs) can automate
+for every new dataset, and whether the right method is chosen is left to 
+individual judgement. Large language models (LLMs) can automate
 the decision-making, but they introduce two problems of their own: they are
 unreliable at arithmetic and can produce plausible but invented statistics,
 and without guidance they follow no consistent methodology. This project
