@@ -1,6 +1,6 @@
 # Automated Exploratory Data Analysis Agent with Retrieval-Augmented Generation
 
-Niraj Palve (25200843)
+Niraj Palve
 
 ## Overview
 
