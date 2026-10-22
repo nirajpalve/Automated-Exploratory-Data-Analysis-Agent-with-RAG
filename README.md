@@ -132,14 +132,6 @@ ID-like columns (integers unique on every row) are detected and excluded
 from statistics automatically. The agent can only call functions listed
 in the module's `TOOLS` registry, so it can never execute arbitrary code.
 
-Running the module directly generates `data/synthetic_test.csv`, a
-1,005-row customer dataset with seven deliberately planted problems: an
-ID column, 30% missing values in `age`, ten impossible ages of 250, a
-heavily skewed log-normal `income`, a `spend` column derived from
-`income`, inconsistent category spelling ("Dublin" vs "dublin"), and five
-duplicated rows. It then runs every tool on that dataset, so the output
-can be checked directly against the known ground truth.
-
 ### Agent pipeline
 
 ```bash
