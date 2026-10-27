@@ -62,16 +62,14 @@ source .venv/bin/activate  # or .venv\Scripts\activate on Windows
 pip install -r requirements.txt
 ```
 
-On Windows, if PowerShell refuses to run the activation script ("running
-scripts is disabled on this system"), run
+On Windows, if PowerShell refuses to run the activation script, run
 `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` once and activate
 again. If `python` opens a Microsoft Store prompt, use `py -m venv .venv`
 to create the environment; inside the activated environment, `python`
 works normally.
 
 All commands below must be run from the project root, not from inside
-`src/`. Every script resolves its paths (`knowledge/`, `data/`,
-`outputs/`, `chroma_db/`) relative to the directory it is launched from.
+`src/`. Every script resolves its paths relative to the directory it is launched from.
 
 ### LLM access
 
